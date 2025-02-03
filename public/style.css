@@ -1,53 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+html {
+  height: 100vh;
 }
 
 body {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: Helvetica, Arial, sans-serif;
-  background: silver;
-  color: #050542;
-}
-
-header {
-  padding: 0.5rem;
-  background: #A675F5;
-  color: white;
-
-  h1 {
-    text-transform: uppercase;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: open sans;
+  color: #3240e0;
+  background-color: #eee;
+   background-image: linear-gradient(45deg, rgb(255, 20, 20) 25%, transparent 25%, transparent 75%, rgb(255, 20, 20) 75%, rgb(255, 20, 20)),
+                    linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+     background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
 }
 
 article {
+  position: relative;
   display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-  width: 20rem;
-  aspect-ratio: 1/1;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background: white;
-  text-align: center;
-  transform-origin: center;
-  transform: rotate(2deg);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  > p {
-    font-size: 2rem;
-    font-family: 'Permanent Marker', cursive;
-    transform-origin: center;
-    transform: rotate(-6deg);
-    word-break: break-all;
-  }
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 50vw;
+  max-width: 25em;
+  min-width: 20em;
+  border-radius: 1rem;
+  background: rgb(9, 255, 0);
+  background: linear-gradient(0deg, rgb(166, 0, 255) 40%, rgb(9, 255, 0) 100%);
+  box-shadow: 0 0 25px 25px rgba(87, 1, 87, 0.378);
+  transition: .25s;
 }
 
-footer {
-  height: 1rem;
-  background: #A675F5;
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+h1 {
+  margin: 2rem 0 1rem;
+  color: rgb(51, 0, 255);
+}
+
+button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: .25rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0,239,255,1);
+  transform: scale(.8);
+  transition: .25s;
+}
+button:focus {
+  outline: none;
+  background: #202592;
+}
+button:focus svg {
+  stroke: rgba(0,239,255,1);
+}
+
+svg {
+  position: absolute;
+  top: calc(1.25rem - 12px);
+  left: calc(1.25rem - 12px);
+  stroke: #4e54c8;
+  transition-delay: .25s;
+}
+button svg:nth-of-type(2) {
+  opacity: 0;
+  transition-delay: 0ms;
+}
+
+img {
+  position: relative;
+  top: 2rem;
+  width: 10em;
+  height: auto;
+  border: 5px solid #ffcd45;
+  border-radius: 10em;
+  box-shadow: 0 0 4px 4px rgba(98, 10, 2, 0.355);
+  transition: .25s .15s;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "html-dd css-dd js-dd"
+    "html-dt css-dt js-dt"
+    ;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  margin-top: -3rem;
+  margin-bottom: 0;
+  padding: 5rem 0 3rem;
+  text-align: center;
+  background: rgb(255,255,255);
+}
+
+dt {
+  margin-top: .25rem;
+  padding-top: .25rem;
+  border-top: 1px solid rgba(0,0,0,0.3);
+  font-weight: bold;
+}
+dt:nth-of-type(1) {
+  grid-area: html-dt;
+}
+dt:nth-of-type(2) {
+  grid-area: css-dt;
+  transform: translateY(1rem);
+}
+dt:nth-of-type(3) {
+  grid-area: js-dt;
+}
+
+dd {
+  margin: 0;
+  padding-left: .3rem;
+  transition: .25s .3s;
+}
+dd:nth-of-type(2){  
+  transform: translateY(1rem);
+}
+
+p { 
+  margin: 0;
+}
+
+article > p {
+  width: 100%;
+  margin-top: 0;
+  padding: 3rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  text-align: center;
+  background: rgba(255,255,255, 0.5);
+}
+
+/* expand content */
+body.expand {
+  font-size: 1.15em;
+}
+
+body.expand article {
+  width: 60vw;
+  max-width: 60vw;
+}
+
+body.expand button svg:first-of-type {
+  opacity: 0;
+  transition-delay: 0ms;
+}
+
+body.expand button svg:nth-of-type(2) {
+  opacity: 1;
+  transition-delay: .25s;
+}
+
+body.expand dd {
+  font-size: 1.75em;
+}
+
+body.expand img {
+  width: 15em;
 }
