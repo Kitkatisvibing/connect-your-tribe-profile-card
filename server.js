@@ -75,5 +75,5 @@ app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
 
-//check of de custom een object is
+//check of de custom werkt
 console.log(custom);
