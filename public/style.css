@@ -61,8 +61,8 @@ dl {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    "html-dd css-dd js-dd"
-    "html-dt css-dt js-dt"
+    "birthday-dd struggle-dd age-dd"
+    "birthday-dt struggle-dt age-dt"
     ;
   justify-items: center;
   align-items: start;
@@ -82,14 +82,14 @@ dt {
   margin-left: 11em;
 }
 dt:nth-of-type(1) {
-  grid-area: html-dt;
+  grid-area: birthday-dt;
 }
 dt:nth-of-type(2) {
-  grid-area: css-dt;
-  transform: translateY(1rem);
+  grid-area: struggle-dt;
+  transform: translateY(-1rem);
 }
 dt:nth-of-type(3) {
-  grid-area: js-dt;
+  grid-area: age-dt;
 }
 
 dd {
@@ -99,7 +99,7 @@ dd {
   margin-left: 11em;
 }
 dd:nth-of-type(2){  
-  transform: translateY(1rem);
+  transform: translateY(-1rem);
 }
 
 p { 
