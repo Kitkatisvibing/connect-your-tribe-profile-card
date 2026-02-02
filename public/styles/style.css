@@ -1,0 +1,132 @@
+body{
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    background-image: url(../assets/backgroundtile.gif);
+    background-repeat: repeat;
+}
+
+.container{
+    margin: 10%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 5px;
+    max-height: 650px;
+}
+
+.left{
+    background-image: url(../assets/backgroundtext.gif);
+    grid-area: 1 / 1 / 6 / 2;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: auto;
+}
+
+main{
+    background-image: url(../assets/backgroundtext.gif);
+    grid-area: 1 / 2 / 6 / 5; 
+    border: solid;
+}
+
+.mypic{
+    width: 250px;
+    height: auto;
+
+    margin-top: 10%;
+    --s: 20px;  /* control the size of the wave */
+    --w: 300px; /* preferred image width */
+  
+    width: round(var(--w),4*var(--s)); 
+    aspect-ratio: 1;
+    padding: var(--s);
+    border: var(--s) solid #0000;
+    box-sizing: border-box;
+    background: conic-gradient(#a252cd,#4eaa74,#b252cd) border-box;
+    border-radius: calc(3.5*var(--s)); 
+    mask: 
+        radial-gradient(calc(sqrt(2)*var(--s)),#000 calc(100% - 1px),#0000),
+        conic-gradient(#000 0 0) content-box,
+        radial-gradient(calc(sqrt(2)*var(--s)),#0000 100%,#000 calc(100% + 1px)) 
+        var(--s) var(--s) padding-box;
+        mask-size: calc(var(--s)*4) calc(var(--s)*4);
+}
+
+h1{
+    margin-top: 0%;
+}
+
+.right{
+    background-image: url(../assets/backgroundtext.gif);
+    grid-area: 1 / 5 / 6 / 6;
+    border: solid;
+    overflow: auto;
+}
+
+.links{
+    text-align: center;
+}
+
+.cakediv{
+    overflow: hidden;
+}
+
+/* From Uiverse.io by adamgiebl */ 
+a {
+    text-align: center;
+    margin: 5px;
+    max-width: 150px;
+    font-size: 18px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 2em;
+    border-radius: 0.3em;
+    color: #fff;
+    height: 2.6em;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+a:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+    transform: translateY(-0.1em);
+}
+
+a:active {
+    box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+    transform: translateY(0em);
+}
+
+ul{
+    list-style: none;
+    display: table;
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    body{
+        overflow: auto;
+    }
+
+    .container{
+        margin: 0;
+        max-height: none;
+    }
+
+    main{
+        overflow: auto;
+    }
+
+    .mypic{
+        margin: 0%;
+    }
+}
