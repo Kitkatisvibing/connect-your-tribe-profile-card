@@ -97,6 +97,11 @@ main{
     overflow-x: hidden;
     margin: 5%;
     height: 95vh;
+
+    h1{
+        margin-bottom: 0;
+    }
+
     .mypic{
         width: 250px;
         height: auto;
@@ -118,6 +123,11 @@ main{
             var(--s) var(--s) padding-box;
             mask-size: calc(var(--s)*4) calc(var(--s)*4);
     }
+
+    .divider{
+        width: 100%;
+    }
+
     ul{
         list-style: none;
         li{

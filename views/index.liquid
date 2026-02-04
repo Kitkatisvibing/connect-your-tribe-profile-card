@@ -5,53 +5,55 @@
 
 <aside class="blinkies">
   <h2>blinkie collection</h2>
-    <img src="assets/blinkies/blinkie_houseofleaves">
-    <img src="assets/blinkies/blinkie_badwebsitedesign.gif">
-    <img src="assets/blinkies/blinkie_bisexual.gif">
-    <img src="assets/blinkies/blinkie_bisexualpride.gif">
-    <img src="assets/blinkies/blinkie_brushes.gif">
-    <img src="assets/blinkies/blinkie_colourpallete.gif">
-    <img src="assets/blinkies/blinkie_computernerd.gif">
-    <img src="assets/blinkies/blinkie_cringeculture.gif">
-    <img src="assets/blinkies/blinkie_emoticons.gif">
-    <img src="assets/blinkies/blinkie_invaderzim.gif">
-    <img src="assets/blinkies/blinkie_junjiito.gif">
-    <img src="assets/blinkies/blinkie_lemondemon.gif">
-    <img src="assets/blinkies/blinkie_mcr.gif">
-    <img src="assets/blinkies/blinkie_millionaires.gif">
-    <img src="assets/blinkies/blinkie_minecraft.gif">
-    <img src="assets/blinkies/blinkie_miraclemusic.gif">
-    <img src="assets/blinkies/blinkie_monsterhigh.gif">
-    <img src="assets/blinkies/blinkie_mspaint.gif">
-    <img src="assets/blinkies/blinkie_nightvale.gif">
-    <img src="assets/blinkies/blinkie_onlinefriends.gif">
-    <img src="assets/blinkies/blinkie_paramore.gif">
-    <img src="assets/blinkies/blinkie_ponderingorb.gif">
-    <img src="assets/blinkies/blinkie_rabiespride.gif">
-    <img src="assets/blinkies/blinkie_scene.gif">
-    <img src="assets/blinkies/blinkie_scp.gif">
-    <img src="assets/blinkies/blinkie_silly.gif">
-    <img src="assets/blinkies/blinkie_spiritphone.gif">
-    <img src="assets/blinkies/blinkie_startrek.gif">
-    <img src="assets/blinkies/blinkie_tetris.gif">
-    <img src="assets/blinkies/blinkie_uselesspokemon.gif">
-    <img src="assets/blinkies/blinkie_utau.gif">
+    <img src="assets/blinkies/blinkie_houseofleaves" alt="5 & 1/2 minute hallway">
+    <img src="assets/blinkies/blinkie_badwebsitedesign.gif" alt="bad website design">
+    <img src="assets/blinkies/blinkie_bisexual.gif" alt="bisexual">
+    <img src="assets/blinkies/blinkie_bisexualpride.gif" alt="bisexual pride">
+    <img src="assets/blinkies/blinkie_brushes.gif" alt="">
+    <img src="assets/blinkies/blinkie_colourpallete.gif" alt="">
+    <img src="assets/blinkies/blinkie_computernerd.gif" alt="computer nerd">
+    <img src="assets/blinkies/blinkie_cringeculture.gif" alt="cringe culture is dead">
+    <img src="assets/blinkies/blinkie_emoticons.gif" alt="">
+    <img src="assets/blinkies/blinkie_invaderzim.gif" alt="invader zim">
+    <img src="assets/blinkies/blinkie_junjiito.gif" alt="junji ito fan">
+    <img src="assets/blinkies/blinkie_lemondemon.gif" alt="lemon demon">
+    <img src="assets/blinkies/blinkie_mcr.gif" alt="my chemical romance">
+    <img src="assets/blinkies/blinkie_millionaires.gif" alt="millionaires">
+    <img src="assets/blinkies/blinkie_minecraft.gif" alt="minecraft">
+    <img src="assets/blinkies/blinkie_miraclemusic.gif" alt="miracle music">
+    <img src="assets/blinkies/blinkie_monsterhigh.gif" alt="monster high">
+    <img src="assets/blinkies/blinkie_mspaint.gif" alt="i heart ms paint">
+    <img src="assets/blinkies/blinkie_nightvale.gif" alt="welcome to nightvale">
+    <img src="assets/blinkies/blinkie_onlinefriends.gif" alt="i love my online friends!">
+    <img src="assets/blinkies/blinkie_paramore.gif" alt="paramore">
+    <img src="assets/blinkies/blinkie_ponderingorb.gif" alt="pondering my orb">
+    <img src="assets/blinkies/blinkie_rabiespride.gif" alt="rabies pride">
+    <img src="assets/blinkies/blinkie_scene.gif" alt="scene 4evr">
+    <img src="assets/blinkies/blinkie_scp.gif" alt="scp foundation">
+    <img src="assets/blinkies/blinkie_silly.gif" alt="born to be silly">
+    <img src="assets/blinkies/blinkie_spiritphone.gif" alt="spirit phone">
+    <img src="assets/blinkies/blinkie_startrek.gif" alt="star trek">
+    <img src="assets/blinkies/blinkie_tetris.gif" alt="tetris freak">
+    <img src="assets/blinkies/blinkie_uselesspokemon.gif" alt="i love useless pokemon">
+    <img src="assets/blinkies/blinkie_utau.gif" alt="i love utau">
 </aside>
 
 <main>
-  <img class="mypic" src="assets/meirl.png" alt="picture of me">
   <h1>{{ person.name }}</h1>
-  <img class="divider" src="assets/dividers/divider_bats.gif">
+  <img class="mypic" src="assets/meirl.png" alt="picture of me">
+  <h2>a.k.a {{ person.nickname }}</h2>
+  <img class="divider" src="assets/dividers/divider_bats.gif" alt="">
   <ul>
-    <li>birthdate: {{ person.birthdate }}</li>
+    <li>birthdate: {{ person.birthdate | date: '%A %d %B %Y' }}</li>
     <li>Github: <a href="https://github.com/Kitkatisvibing">{{ person.github_handle }}</a></li>
     <li>{{ person.bio }}</li>
   </ul>
-  <img class="divider" src="assets/dividers/divider_cakes.gif">
+  <img class="divider" src="assets/dividers/divider_cakes.gif" alt="">
   <p>I am a nonbinary (they/he) bisexual person who's special interest is transformers. 
   This is my second time doing the first year of this study and i'm overall just happy to be here. 
   I'm a big fan of the "old web" aesthetic and developed my interest in frontend by exploring neocities pages.
   I hope you enjoy this silly little page i made!</p>
+  <img class="divider" src="assets/dividers/smileydiv.webp" alt="">
 </main>
 
 
@@ -69,17 +71,18 @@
 <button class="stampButton">Stamps</button>
 <div class="stamps">
   <h2>stamps</h2>
-  <img src="assets/stamps/stamp_hetalia">
-  <img src="assets/stamps/stamp_homestuck">
-  <img src="assets/stamps/stamp_houseofleaves">
-  <img src="assets/stamps/stamp_junko.gif">
-  <img src="assets/stamps/stamp_mango.gif">
-  <img src="assets/stamps/stamp_music.gif">
-  <img src="assets/stamps/stamp_puyotetris">
-  <img src="assets/stamps/stamp_scottpilgrim">
-  <img src="assets/stamps/stamp_triplebaka">
-  <img src="assets/stamps/stamp_nonbinary.png">
-  <img src="assets/stamps/stamp_tvtime">
+  <img src="assets/stamps/stamp_hetalia" alt="Hetalia">
+  <img src="assets/stamps/stamp_homestuck" alt="I love homestuck">
+  <img src="assets/stamps/stamp_houseofleaves" alt="House of leaves">
+  <img src="assets/stamps/stamp_junko.gif" alt="Junko Enoshima">
+  <img src="assets/stamps/stamp_mango.gif" alt="Mango">
+  <img src="assets/stamps/stamp_music.gif" alt="The music i like sucks (but i love it anyway)">
+  <img src="assets/stamps/stamp_puyotetris" alt="puyo puyo tetris">
+  <img src="assets/stamps/stamp_scottpilgrim" alt="Scott Pilgrim">
+  <img src="assets/stamps/stamp_triplebaka" alt="triple baka">
+  <img src="assets/stamps/stamp_nonbinary.png" alt="i love being nonbinary">
+  <img src="assets/stamps/stamp_tvtime" alt="IT'S!! TV!! TIME!!">
+  <img src="assets/stamps/stamp_oldweb.png" alt="i love old web">
 </div>
 
 {% render 'partials/foot.liquid' %}
