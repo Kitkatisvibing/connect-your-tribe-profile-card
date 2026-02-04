@@ -22,3 +22,11 @@ function leftSlide() {
     socialButton.classList.remove('rightMoved')
 }
 
+let Main = document.querySelector('main')
+Main.addEventListener('click', closeAll)
+function closeAll() {
+    stampButton.classList.remove('rightMoved')
+    leftButton.classList.remove('leftMoved')
+    socialButton.classList.remove('rightMoved')
+}
+
