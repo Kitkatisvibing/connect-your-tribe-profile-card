@@ -3,7 +3,7 @@ leftButton.addEventListener('click', slideRight)
 function slideRight() {
     leftButton.classList.toggle('leftMoved')
     socialButton.classList.remove('rightMoved')
-    socialButton.classList.remove('rightMoved')
+    stampButton.classList.remove('rightMoved')
 }
 
 let socialButton = document.querySelector('.socialButton')
