@@ -52,6 +52,10 @@ app.get('/', async function (request, response) {
    // Render bijvoorbeeld contact.liquid uit de views map, zonder daar iets aan mee te geven
    // response.render('contact.liquid')
 // })
+app.get('/oefenen', async function (request, response) {
+   // Render practice.liquid uit de Views map en geef de opgehaalde data mee, in een variabele genaamd person
+   response.render('practice.liquid', {person: personResponseJSON.data})
+})
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 // Hier doen we nu nog niets mee, maar je kunt er mee spelen als je wilt

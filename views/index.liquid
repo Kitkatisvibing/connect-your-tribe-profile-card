@@ -1,55 +1,63 @@
 {% render 'partials/head.liquid' %}
 
-    <div class="container">
-        <aside class="left">
-            <h2>blinkie collection</h2>
-            <img src="assets/blinkies/blinkie_houseofleaves">
-            <img src="assets/blinkies/blinkie_badwebsitedesign.gif">
-            <img src="assets/blinkies/blinkie_bisexual.gif">
-            <img src="assets/blinkies/blinkie_bisexualpride.gif">
-            <img src="assets/blinkies/blinkie_brushes.gif">
-            <img src="assets/blinkies/blinkie_colourpallete.gif">
-            <img src="assets/blinkies/blinkie_computernerd.gif">
-            <img src="assets/blinkies/blinkie_cringeculture.gif">
-            <img src="assets/blinkies/blinkie_emoticons.gif">
-            <img src="assets/blinkies/blinkie_invaderzim.gif">
-            <img src="assets/blinkies/blinkie_junjiito.gif">
-            <img src="assets/blinkies/blinkie_lemondemon.gif">
-            <img src="assets/blinkies/blinkie_mcr.gif">
-            <img src="assets/blinkies/blinkie_millionaires.gif">
-            <img src="assets/blinkies/blinkie_minecraft.gif">
-            <img src="assets/blinkies/blinkie_miraclemusic.gif">
-            <img src="assets/blinkies/blinkie_monsterhigh.gif">
-            <img src="assets/blinkies/blinkie_mspaint.gif">
-            <img src="assets/blinkies/blinkie_nightvale.gif">
-            <img src="assets/blinkies/blinkie_onlinefriends.gif">
-            <img src="assets/blinkies/blinkie_paramore.gif">
-            <img src="assets/blinkies/blinkie_ponderingorb.gif">
-            <img src="assets/blinkies/blinkie_rabiespride.gif">
-            <img src="assets/blinkies/blinkie_scene.gif">
-            <img src="assets/blinkies/blinkie_scp.gif">
-            <img src="assets/blinkies/blinkie_silly.gif">
-            <img src="assets/blinkies/blinkie_spiritphone.gif">
-            <img src="assets/blinkies/blinkie_startrek.gif">
-            <img src="assets/blinkies/blinkie_tetris.gif">
-            <img src="assets/blinkies/blinkie_uselesspokemon.gif">
-            <img src="assets/blinkies/blinkie_utau.gif">
-        </aside>
+
+<button class="blinkies">Blinkies</button>
+
+<aside class="left">
+  <h2>blinkie collection</h2>
+    <img src="assets/blinkies/blinkie_houseofleaves">
+    <img src="assets/blinkies/blinkie_badwebsitedesign.gif">
+    <img src="assets/blinkies/blinkie_bisexual.gif">
+    <img src="assets/blinkies/blinkie_bisexualpride.gif">
+    <img src="assets/blinkies/blinkie_brushes.gif">
+    <img src="assets/blinkies/blinkie_colourpallete.gif">
+    <img src="assets/blinkies/blinkie_computernerd.gif">
+    <img src="assets/blinkies/blinkie_cringeculture.gif">
+    <img src="assets/blinkies/blinkie_emoticons.gif">
+    <img src="assets/blinkies/blinkie_invaderzim.gif">
+    <img src="assets/blinkies/blinkie_junjiito.gif">
+    <img src="assets/blinkies/blinkie_lemondemon.gif">
+    <img src="assets/blinkies/blinkie_mcr.gif">
+    <img src="assets/blinkies/blinkie_millionaires.gif">
+    <img src="assets/blinkies/blinkie_minecraft.gif">
+    <img src="assets/blinkies/blinkie_miraclemusic.gif">
+    <img src="assets/blinkies/blinkie_monsterhigh.gif">
+    <img src="assets/blinkies/blinkie_mspaint.gif">
+    <img src="assets/blinkies/blinkie_nightvale.gif">
+    <img src="assets/blinkies/blinkie_onlinefriends.gif">
+    <img src="assets/blinkies/blinkie_paramore.gif">
+    <img src="assets/blinkies/blinkie_ponderingorb.gif">
+    <img src="assets/blinkies/blinkie_rabiespride.gif">
+    <img src="assets/blinkies/blinkie_scene.gif">
+    <img src="assets/blinkies/blinkie_scp.gif">
+    <img src="assets/blinkies/blinkie_silly.gif">
+    <img src="assets/blinkies/blinkie_spiritphone.gif">
+    <img src="assets/blinkies/blinkie_startrek.gif">
+    <img src="assets/blinkies/blinkie_tetris.gif">
+    <img src="assets/blinkies/blinkie_uselesspokemon.gif">
+    <img src="assets/blinkies/blinkie_utau.gif">
+</aside>
 
         <main>
             <img class="mypic" src="assets/meirl.png" alt="picture of me">
-            <img class="divider" src="assets/dividers/divider_bats.gif">
             <h1>{{ person.name }}</h1>
-            <p>I an a nonbinary (they/he) bisexual person who's special interest is trnaformers. 
+            <img class="divider" src="assets/dividers/divider_bats.gif">
+            <ul>
+              <li>birthdate: {{ person.birthdate }}</li>
+              <li>Github: <a href="https://github.com/Kitkatisvibing">{{ person.github_handle }}</a></li>
+              <li>{{ person.bio }}</li>
+            </ul>
+            <img class="divider" src="assets/dividers/divider_cakes.gif">
+            <p>I am a nonbinary (they/he) bisexual person who's special interest is transformers. 
             This is my second time doing the first year of this study and i'm overall just happy to be here. 
             I'm a big fan of the "old web" aesthetic and developed my interest in frontend by exploring neocities pages.
             My mission is to return joy and whimsy to the web.
             I hope you enjoy this silly little page i made!</p>
             </main>
 
-        <aside class="right">
-            <div class="links">
-                <h2>links</h2>
+
+            <div class="Socials">
+                <h2>Socials</h2>
                 <ul>
                     <li><a href="https://www.instagram.com/kitkatisvibing/" target="_blank">my insta!!</a></li>
                     <li><a href="https://www.tumblr.com/kitkatisvibing/" target="_blank">my tumblr!!</a></li>
@@ -57,12 +65,8 @@
                 </ul>
             </div>
 
-            <div class="cakediv">
-             <img class="divider" src="assets/dividers/divider_cakes.gif">
-            </div>
-
             <div class="stamps">
-                <h2>stamp collection</h2>
+                <h2>stamps</h2>
                 <img src="assets/stamps/stamp_hetalia">
                 <img src="assets/stamps/stamp_homestuck">
                 <img src="assets/stamps/stamp_houseofleaves">
@@ -75,7 +79,5 @@
                 <img src="assets/stamps/stamp_nonbinary.png">
                 <img src="assets/stamps/stamp_tvtime">
             </div>
-        </aside>
-    </div>
 
 {% render 'partials/foot.liquid' %}

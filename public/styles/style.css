@@ -1,4 +1,104 @@
 body{
+    margin: 0;
+    text-align: center;
+    background-image: url(../assets/backgroundtile.gif);
+    background-repeat: repeat;
+}
+
+.blinkies{
+    anchor-name: --blinkieButton;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.leftMoved{
+    animation-name: openLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes openLeft{
+    100%{
+        translate: 50vw;
+    }
+}
+
+.left{
+    background-image: url(../assets/backgroundaside.jpg);
+    filter: drop-shadow(10px 10px 10px #000000);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    position: absolute;
+    position-anchor: --blinkieButton;
+    position-area: left span-bottom;
+    z-index: 1;
+
+    img{
+        margin: 3%;
+    }
+}
+
+main{
+    background-image: url(../assets/backgroundtext.gif);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    margin: 5%;
+    .mypic{
+        width: 250px;
+        height: auto;
+
+        --s: 20px;
+        --w: 300px;
+  
+        width: round(var(--w),4*var(--s)); 
+        aspect-ratio: 1;
+        padding: var(--s);
+        border: var(--s) solid #0000;
+        box-sizing: border-box;
+        background: conic-gradient(#a252cd,#4eaa74,#b252cd) border-box;
+        border-radius: calc(3.5*var(--s)); 
+        mask: 
+            radial-gradient(calc(sqrt(2)*var(--s)),#000 calc(100% - 1px),#0000),
+            conic-gradient(#000 0 0) content-box,
+            radial-gradient(calc(sqrt(2)*var(--s)),#0000 100%,#000 calc(100% + 1px)) 
+            var(--s) var(--s) padding-box;
+            mask-size: calc(var(--s)*4) calc(var(--s)*4);
+    }
+    ul{
+        list-style: none;
+        li{
+            text-align: start;
+        }
+    }
+}
+
+
+/*
+⠀⠀⠀⢸⣦⡀⠀⠀⠀⠀⢀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⢸⣏⠻⣶⣤⡶⢾⡿⠁⠀⢠⣄⡀⢀⣴⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⣀⣼⠷⠀⠀⠁⢀⣿⠃⠀⠀⢀⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠴⣾⣯⣅⣀⠀⠀⠀⠈⢻⣦⡀⠒⠻⠿⣿⡿⠿⠓⠂⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠉⢻⡇⣤⣾⣿⣷⣿⣿⣤⠀⠀⣿⠁⠀⠀⠀⢀⣴⣿⣿⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠸⣿⡿⠏⠀⢀⠀⠀⠿⣶⣤⣤⣤⣄⣀⣴⣿⡿⢻⣿⡆⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠟⠁⠀⢀⣼⠀⠀⠀⠹⣿⣟⠿⠿⠿⡿⠋⠀⠘⣿⣇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢳⣶⣶⣿⣿⣇⣀⠀⠀⠙⣿⣆⠀⠀⠀⠀⠀⠀⠛⠿⣿⣦⣤⣀⠀⠀
+⠀⠀⠀⠀⠀⠀⣹⣿⣿⣿⣿⠿⠋⠁⠀⣹⣿⠳⠀⠀⠀⠀⠀⠀⢀⣠⣽⣿⡿⠟⠃
+⠀⠀⠀⠀⠀⢰⠿⠛⠻⢿⡇⠀⠀⠀⣰⣿⠏⠀⠀⢀⠀⠀⠀⣾⣿⠟⠋⠁⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠀⠀⣰⣿⣿⣾⣿⠿⢿⣷⣀⢀⣿⡇⠁⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠉⠁⠀⠀⠀⠀⠙⢿⣿⣿⠇⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀
+*/
+/*
+body{
     height: 100%;
     overflow: hidden;
     text-align: center;
@@ -30,6 +130,7 @@ main{
     background-image: url(../assets/backgroundtext.gif);
     grid-area: 1 / 2 / 6 / 5; 
     border: solid;
+    overflow: scroll;
 }
 
 .mypic{
@@ -37,8 +138,8 @@ main{
     height: auto;
 
     margin-top: 10%;
-    --s: 20px;  /* control the size of the wave */
-    --w: 300px; /* preferred image width */
+    --s: 20px;
+    --w: 300px;
   
     width: round(var(--w),4*var(--s)); 
     aspect-ratio: 1;
@@ -74,7 +175,6 @@ h1{
     overflow: hidden;
 }
 
-/* From Uiverse.io by adamgiebl */ 
 a {
     text-align: center;
     margin: 5px;
@@ -130,3 +230,4 @@ ul{
         margin: 0%;
     }
 }
+*/
