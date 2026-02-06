@@ -144,12 +144,16 @@ button:hover{
             color: #0f1111;
             display: inline-block;
             height: 5vh;
-            width: 7vw;
+            width: fit-content;
             padding: 0 11px;
             text-align: center;
             align-items: center;
             text-decoration: none;
             transition: filter 1s;
+
+            @media (min-width:1200px){
+                width: 7vw;
+            }
         }
 
         a:hover, a:active{
